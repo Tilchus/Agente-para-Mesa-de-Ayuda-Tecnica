@@ -34,7 +34,7 @@ class AppNexiGUI:
         self.lbl_logo.pack(pady=10)
 
         # Título del sistema
-        self.lbl_title = tk.Label(root, text="NEXO GRIDS", font=("Arial", 16, "bold"), 
+        self.lbl_title = tk.Label(root, text="### NEXI ###", font=("Arial", 16, "bold"), 
                                   bg=self.estilos["bg"], fg="white")
         self.lbl_title.pack(pady=5)
 
