@@ -9,9 +9,9 @@ class AppNexiGUI:
     def __init__(self, root):
         self.root = root
         self.root.title("NEXI- Soporte IT")
-        self.root.geometry("500x650") # Aumenté un poco el alto para mayor comodidad
+        self.root.geometry("500x650") 
         
-        # 1. Definición de Paleta Corporativa (Estilo Profesional)
+        # 1. Estilo 
         self.estilos = {
             "bg": "#1e1e1e",
             "fg": "#d4d4d4",
@@ -26,7 +26,7 @@ class AppNexiGUI:
         # 2. Carga y redimensionamiento de imagen con PIL
         ruta_logo = r"C:\Users\Sil_Tech\Desktop\Proyecto_AgenteNexi_Modularizado\logo.png"
         imagen_original = Image.open(ruta_logo)
-        # Redimensionamos a 150x150 para que no tape el resto de la interfaz
+        # Redimensionamos a 150x150 imagen
         imagen_redimensionada = imagen_original.resize((150, 150), Image.Resampling.LANCZOS)
         self.logo = ImageTk.PhotoImage(imagen_redimensionada)
         
@@ -38,7 +38,7 @@ class AppNexiGUI:
                                   bg=self.estilos["bg"], fg="white")
         self.lbl_title.pack(pady=5)
 
-        # 3. Área de chat con estilo moderno
+        # 3. Área de chat
         self.chat_area = scrolledtext.ScrolledText(
             root, state='disabled', wrap='word', 
             font=("Consolas", 10),
@@ -50,7 +50,7 @@ class AppNexiGUI:
         # expand=True permite que el chat ocupe el espacio sobrante
         self.chat_area.pack(padx=20, pady=10, fill=tk.BOTH, expand=True)
 
-        # 4. Campo de entrada estilo consola
+        # 4.Estilo consola
         self.input_field = tk.Entry(
             root, font=("Arial", 12),
             bg=self.estilos["chat_bg"],
