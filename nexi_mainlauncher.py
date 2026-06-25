@@ -22,7 +22,7 @@ def procesar_interaccion(nexi, consulta, es_reintento=False):
             texto_nexi = response.text
             nexi.historial_bolsa.append(f"NEXI: {texto_nexi}")
             
-            # --- Lógica de escalado con captura de reporte ---
+            # --- Lógica de escalado con reporte ---
             if "ESCALAR" in texto_nexi.upper() or nexi.intentos >= config_inicial.MAX_INTENTOS:
                 # Capturamos el string que devuelve tu nueva función
                 reporte = gestor_datos_determinista.ejecutar_escalado_determinista(nexi.historial_bolsa, nexi.client)
@@ -31,7 +31,7 @@ def procesar_interaccion(nexi, consulta, es_reintento=False):
                 nexi.intentos = 0
                 nexi.historial_bolsa = []
                 
-                # Devolvemos el mensaje compuesto para que la GUI lo muestre en el chat
+                # Retornamos el mensaje compuesto para que la GUI lo muestre en el chat
                 return f"Ticket escalado exitosamente.{reporte}"
             
             return texto_nexi
