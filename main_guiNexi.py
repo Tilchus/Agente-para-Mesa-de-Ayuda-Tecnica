@@ -3,7 +3,7 @@ from tkinter import scrolledtext
 import threading
 import nexi_mainlauncher 
 from agente_nexi import AgenteNexi
-from PIL import Image, ImageTk  # Importación necesaria para redimensionar
+from PIL import Image, ImageTk  # Importación necesaria para redimensionar imagen
 
 class AppNexiGUI:
     def __init__(self, root):
