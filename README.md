@@ -7,7 +7,7 @@
 * **📅 Año:** 2º/2026
 * **📚 Materia:** Desarrollo de Sistemas de Inteligencia Artificial
 * **👨‍🏫 Profesor:** Silvio Daniel Benitez
-* **👩‍💻 Alumna:** Silvana Alejandra Gerez
+* **👩‍💻 Alumna:**  Alejandra Bernasconi, Silvana Alejandra Gerez, Candela Molinas
 
 ---
 
