@@ -17,7 +17,7 @@ def procesar_interaccion(nexi, consulta, es_reintento=False):
             texto_nexi = response.text
             nexi.historial_bolsa.append(f"NEXI: {texto_nexi}")
             
-            # --- Lógica de escalado (Manteniendo tu lógica original) ---
+            # --- Lógica de escalado ---
             if "ESCALAR" in texto_nexi.upper() or nexi.intentos >= config_inicial2.MAX_INTENTOS:
                 reporte = gestor_datos_determinista2.ejecutar_escalado_determinista(nexi.historial_bolsa, nexi.client)
                 
